@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+                      http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+  version="3.0"
+  metadata-complete="true">
+	
+	
+	<!-- 可以用EL表达式中的initPara内置对象取得此配置参数 -->
+	<context-param>
+		<param-name>user</param-name>
+		<param-value>admin</param-value>
+	</context-param>
+	
+	<!-- 用于显示所有商品信息的Servlet -->
+	<servlet>
+		<servlet-name>product</servlet-name>
+		<servlet-class>cn.itcast.day17.servlet.ProductServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>product</servlet-name>
+		<url-pattern>/productServlet</url-pattern>	
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>test</servlet-name>
+		<servlet-class>cn.itcast.day18.servlet.UserServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>test</servlet-name>
+		<url-pattern>/testServlet</url-pattern>	
+	</servlet-mapping>
+	
+</web-app>
